@@ -364,7 +364,14 @@ cat > input.nml <<EOF
        hours = $hours
        seconds = $seconds
        dt_atmos = $dt_atmos
-       dt_ocean = $dt_atmos
+       !dt_ocean = $dt_atmos
+       ice_npes = -1 ! added
+       land_npes = -1 ! added
+       do_ocean=.False. ! added
+       dt_cpld = $dt_atmos ! added
+       do_flux=.False. ! added
+       do_land=.False. ! added
+       do_ice=.False. ! added
        current_date =  $curr_date
        calendar = 'julian'
        atmos_nthreads = $nthreads
